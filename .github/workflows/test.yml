@@ -9,11 +9,13 @@ jobs:
       - name: Code Checkout
         run: echo "Code checkout done"
   build:
+    needs: code
     runs-on: linux-latest
     steps:
       - name: Code Build
         run: echo "Code build"
   deploy:
+    needs: build
     runs-on: linux-latest
     steps:
       - name: Code deploy
