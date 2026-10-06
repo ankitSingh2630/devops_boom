@@ -1,0 +1,21 @@
+name: CICD
+
+on: push
+
+jobs:
+  code:
+    runs-on: linux-latest
+    steps:
+      - name: Code Checkout
+        run: echo "Code checkout done"
+  build:
+    runs-on: linux-latest
+    steps:
+      - name: Code Build
+        run: echo "Code build"
+  deploy:
+    runs-on: linux-latest
+    steps:
+      - name: Code deploy
+        run: echo "Code Deploy"
+  
